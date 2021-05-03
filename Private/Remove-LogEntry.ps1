@@ -1,4 +1,4 @@
-function Get-Name {
+function Remove-LogEntry {
 	[CmdletBinding()]
 	param (
 		[Parameter(Mandatory = $true)]
@@ -24,7 +24,7 @@ function Get-Name {
 	if ($validLogEntries -ne $null -and $validLogEntries -ne '') {
 		Set-Content -Path $previousFilesLogPath -Value $validLogEntries
 	}
- else {
+	else {
 		Clear-Content $previousFilesLogPath
 	}
 }
